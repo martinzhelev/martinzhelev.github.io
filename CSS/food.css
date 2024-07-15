@@ -1,0 +1,93 @@
+h1{
+    text-align: center;
+    font-family: monospace;
+   font-size: 200%; 
+   color: #664229;
+}
+body{
+    background-color: #e5d3b3;
+}
+.logoFirm{
+    height: 15%;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-20%, -20%);
+    cursor: pointer;
+
+}
+.foods{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    width: 98%;
+}
+.food{
+    position:relative; 
+    left: 50%;
+    transform: translate(-50%, 0); 
+    width: 98%;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    
+}
+
+.foodCard{
+    position: relative  ;
+    border: 3px solid;
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 1%;
+    padding-top: 0px;
+    line-height: 90%;
+    font-size: large;
+    border-radius: 2%;
+}
+
+.foodCard h3{
+    position: relative;
+    text-align: center;
+}
+.priceIngr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.priceIngr h4{
+    margin-right:10%;
+    align-self: center;
+
+}
+
+@media (min-width: 550px){
+    .foodCard{
+        position: relative  ;
+        border: 3px solid;
+        width: 35%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 1%;
+        padding-top: 0px;
+        line-height: 80%;
+        font-size: large;
+        border-radius: 2%;
+    }
+    .logoFirm{
+        height: 30%;
+        width: auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translate(-20%, -20%);
+    }
+    h1{
+        text-align: center;
+        font-family: monospace;
+       font-size: 300%; 
+       color: #664229;
+     
+    }
+}

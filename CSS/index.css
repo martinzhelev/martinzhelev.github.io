@@ -1,0 +1,94 @@
+
+body{
+    background-color:  #e5d3b3;
+}
+
+.logoFirm{
+    height: 30%;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-20%, -20%);
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+   font-size: 300%; 
+   color: #664229;
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    
+}
+.items{
+    position: relative;
+    height: 50%;
+    width: 50%;
+    background-color: beige;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    margin: 1%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.pictures{
+    position: relative;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: auto;
+    opacity: 1;
+}
+
+.menu-choices{
+    color: #af9276;
+    font-size: 900%;
+    font-family: serif;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    z-index: 0;
+}
+
+@media (max-width: 550px) {
+    .menu-choices{
+        color: #af9276;
+        font-size: 200%;
+        font-family: serif;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -10%);
+        z-index: 0;
+        bottom: 0.1%;
+    }
+    .pictures{
+        position: relative;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 149%;
+        opacity: 1;
+    }
+    .logoFirm{
+        height: 15%;
+        width: auto;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translate(-20%, -20%);
+    }
+    h1{
+        text-align: center;
+        font-family: monospace;
+       font-size: 200%; 
+       color: #664229;
+    } 
+}
