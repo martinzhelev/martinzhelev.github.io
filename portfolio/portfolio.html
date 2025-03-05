@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Zhelev - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and specific styling */
+        .skill-card {
+            transition: transform 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: scale(1.05);
+        }
+        .project-img {
+            transition: opacity 0.3s ease;
+        }
+        .project-img:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Martin Zhelev</h1>
+            <div class="space-x-4">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <a href="#skills" class="hover:text-gray-300">Skills</a>
+                <a href="#projects" class="hover:text-gray-300">Projects</a>
+                <a href="#resume" class="hover:text-gray-300">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-r from-blue-500 to-purple-600">
+        <div class="container mx-auto px-4 text-white">
+            <h1 class="text-5xl font-bold mb-4">Hi, I'm Martin Zhelev</h1>
+            <p class="text-xl mb-6">Full Stack Developer | Problem Solver | Tech Enthusiast</p>
+            <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200">View My Work</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill Cards -->
+                <div class="skill-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fab fa-js text-4xl text-yellow-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold">JavaScript</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fab fa-cuttlefish text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold">C++ / C#</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">HTML/CSS</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fab fa-bootstrap text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Bootstrap/Tailwind</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-database text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">MySQL/MongoDB</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fab fa-node text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Node.js/Express</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-code text-4xl text-gray-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Algorithms</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Project 1</h3>
+                        <p class="text-gray-600 mb-4">A brief description of your project goes here.</p>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <img src="https://via.placeholder.com/150" alt="Project 1 Screenshot 1" class="project-img rounded">
+                            <img src="https://via.placeholder.com/150" alt="Project 1 Screenshot 2" class="project-img rounded">
+                        </div>
+                        <a href="https://github.com/yourusername/project1" target="_blank" 
+                           class="text-blue-600 hover:underline flex items-center">
+                            <i class="fab fa-github mr-2"></i>View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Resume</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4">Education</h3>
+                <p class="mb-4">Your University - Degree (Year)</p>
+                
+                <h3 class="text-2xl font-semibold mb-4">Experience</h3>
+                <div class="mb-6">
+                    <h4 class="font-semibold">Job Title - Company</h4>
+                    <p class="text-gray-600">Year - Year</p>
+                    <ul class="list-disc pl-5">
+                        <li>Responsibility 1</li>
+                        <li>Responsibility 2</li>
+                    </ul>
+                </div>
+
+                <h3 class="text-2xl font-semibold mb-4">Skills Summary</h3>
+                <p>Languages: JS, C++, C#, SQL</p>
+                <p>Frameworks: Node.js, Express, Bootstrap, Tailwind</p>
+                <p>Databases: MySQL, MongoDB</p>
+                <p>Other: Algorithms, Database Design</p>
+                
+                <a href="#" class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">
+                    Download PDF Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <div class="mt-2">
+            <a href="https://github.com/yourusername" class="text-gray-300 hover:text-white mx-2">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" class="text-gray-300 hover:text-white mx-2">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple project gallery preview (could be expanded)
+        document.querySelectorAll('.project-img').forEach(img => {
+            img.addEventListener('click', () => {
+                alert('Full project preview coming soon!');
+            });
+        });
+    </script>
+</body>
+</html>
