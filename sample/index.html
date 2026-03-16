@@ -3,26 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/index.css">
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <title>MCZ Proactive</title>
+    <title>Our Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .menu-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
 </head>
-<body>
-    <img src="pics/logo-MCZ-transparent.png" alt="Logo" class="logoFirm">
-    <h1>MCZProactive</h1>
-   
-<div id="menu">
-    <div class="items">
-        <h2 class="menu-choices">DRINKS</h2>
-        <img src="pics/glass-with-lemon.png" alt="logo drinks" class="pictures">
-    </div>
-    <div class="items">
-        <h2 class="menu-choices">FOOD</h2>
-        <img src="pics/spagheti_logo_transparent.png" alt="Logo food" class="pictures">
-    </div>
-</div>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
+                <i class="fas fa-mug-hot"></i> The Cafe
+            </div>
+        </nav>
+    </header>
 
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center">
+            <h1 class="text-5xl font-extrabold text-gray-800 mb-4">Welcome!</h1>
+            <p class="text-xl text-gray-600 mb-12">Explore our delicious menu.</p>
+        </div>
 
-    <script src="JS/index.js"></script> 
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Drinks Card -->
+            <div id="drinks-card" class="menu-card bg-cover bg-center rounded-lg overflow-hidden cursor-pointer h-80" style="background-image: url('https://images.unsplash.com/photo-1514362545857-3bc7dca47259?q=80&w=2070&auto=format&fit=crop');">
+                <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
+                    <h2 class="text-4xl font-bold text-white">Drinks</h2>
+                </div>
+            </div>
+
+            <!-- Food Card -->
+            <div id="food-card" class="menu-card bg-cover bg-center rounded-lg overflow-hidden cursor-pointer h-80" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop');">
+                <div class="bg-black bg-opacity-50 h-full flex items-center justify-center">
+                    <h2 class="text-4xl font-bold text-white">Food</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-16">
+        <p>&copy; 2025 The Cafe. All rights reserved.</p>
+    </footer>
+
+    <script src="JS/main.js"></script>
 </body>
 </html>

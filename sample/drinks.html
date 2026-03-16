@@ -3,21 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="CSS/drinks.css">
-    <title>MCZ Proactive</title>
+    <title>Drinks Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
-<body>
-    <img src="pics/logo-MCZ-transparent.png" alt="Logo" class="logoFirm">
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
+                <i class="fas fa-mug-hot"></i> The Cafe
+            </div>
+            <a href="index.html" class="text-gray-600 hover:text-gray-800"><i class="fas fa-arrow-left mr-2"></i>Back to Menu</a>
+        </nav>
+    </header>
 
-    <h1>MCZProactive</h1>
-    <div id="alcoholicDrinks">
-        <h2 class="menu-choices">ALCOHOL</h2>
-        <img src="pics/cocktail logo.png" alt="logo drinks" class="pictures">
-    </div>
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-gray-800">Drinks</h1>
+            <p class="text-xl text-gray-600 mt-2">Quench your thirst.</p>
+        </div>
 
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Alcoholic Drinks -->
+            <div id="alcoholicDrinks" class="category-card bg-white p-8 rounded-lg shadow-lg text-center cursor-pointer">
+                <i class="fas fa-martini-glass-citrus text-5xl text-purple-500 mb-4"></i>
+                <h3 class="text-2xl font-bold">Alcoholic Drinks</h3>
+                <p class="text-gray-500 mt-2">Cocktails, Wine, Beer & more.</p>
+            </div>
 
-    <script src="JS/drinks.js"></script> 
+            <!-- Non-Alcoholic Drinks -->
+            <div id="nonAlcoholicDrinks" class="category-card bg-white p-8 rounded-lg shadow-lg text-center cursor-pointer">
+                <i class="fas fa-coffee text-5xl text-yellow-700 mb-4"></i>
+                <h3 class="text-2xl font-bold">Non-Alcoholic Drinks</h3>
+                <p class="text-gray-500 mt-2">Coffee, Tea, Juices & more.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-16">
+        <p>&copy; 2025 The Cafe. All rights reserved.</p>
+    </footer>
+
+    <script src="JS/main.js"></script>
 </body>
 </html>

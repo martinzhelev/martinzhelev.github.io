@@ -16,12 +16,6 @@
         .skill-card:hover {
             transform: scale(1.05);
         }
-        .project-img {
-            transition: opacity 0.3s ease;
-        }
-        .project-img:hover {
-            opacity: 0.8;
-        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -90,19 +84,25 @@
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: The Cafe -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <a href="../sample/index.html" target="_blank" class="block hover:opacity-90 transition-opacity">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc7dca47259?q=80&w=2070&auto=format&fit=crop" alt="The Cafe Project" class="w-full h-48 object-cover">
+                    </a>
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Project 1</h3>
-                        <p class="text-gray-600 mb-4">A brief description of your project goes here.</p>
-                        <div class="grid grid-cols-2 gap-2 mb-4">
-                            <img src="https://via.placeholder.com/150" alt="Project 1 Screenshot 1" class="project-img rounded">
-                            <img src="https://via.placeholder.com/150" alt="Project 1 Screenshot 2" class="project-img rounded">
+                        <h3 class="text-2xl font-semibold mb-2">The Cafe - Sample Menu</h3>
+                        <p class="text-gray-600 mb-4">A modern, responsive sample website for a cafe, built with HTML, Tailwind CSS, and vanilla JavaScript.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <a href="../sample/index.html" target="_blank" 
+                               class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 text-sm font-semibold">
+                                View Live Project
+                            </a>
+                            <a href="https://github.com/martinzhelev/martinzhelev.github.io/tree/main/sample" target="_blank" 
+                               class="text-gray-500 hover:text-gray-900 flex items-center text-sm">
+                                <i class="fab fa-github fa-lg mr-2"></i>
+                                Source Code
+                            </a>
                         </div>
-                        <a href="https://github.com/yourusername/project1" target="_blank" 
-                           class="text-blue-600 hover:underline flex items-center">
-                            <i class="fab fa-github mr-2"></i>View on GitHub
-                        </a>
                     </div>
                 </div>
                 <!-- Add more project cards as needed -->
@@ -166,12 +166,6 @@
             });
         });
 
-        // Simple project gallery preview (could be expanded)
-        document.querySelectorAll('.project-img').forEach(img => {
-            img.addEventListener('click', () => {
-                alert('Full project preview coming soon!');
-            });
-        });
     </script>
 </body>
 </html>

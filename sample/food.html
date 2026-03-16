@@ -3,77 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="CSS/food.css">
-    <title>MCZ Proactive</title>
+    <title>Food Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <img src="pics/logo-MCZ-transparent.png" alt="Logo" class="logoFirm">
-
-    <h1>MCZProactive</h1>
-
-    <div class="foods">
-        <div class="foodCard">
-            <img src="pics/kebab.jpg" alt="Kebab" class="food">
-            <h3>KEBAB</h3>
-            <div class="priceIngr">
-                <ul>
-                    <li>Meat</li>
-                    <li>Vegetables</li>
-                </ul>
-                <h4>$10,99</h4>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
+                <i class="fas fa-utensils"></i> The Cafe
             </div>
-          
-        </div>
-        <div class="foodCard">
-            <img src="pics/lasagna.jpg" alt="Lasagna" class="food">
-            <h3>LASAGNA</h3>
-            <div class="priceIngr">
-                <ul>
-                    <li>Meat sauce</li>
-                    <li>Noodles</li>
-                    <li>Ricotta mixture</li>
-                    <li>Mozarella Slices</li>
-                    <li>Parmesan cheese</li>
-                </ul>
-                <h4>$12,89</h4>
-            </div>
-            
-        </div>
-        <div class="foodCard">
-            <img src="pics/ramen.jpg" alt="Ramen" class="food">
-            <h3>RAMEN</h3>
-            <div class="priceIngr">
-                <ul>
-                    <li>Noodles</li>
-                    <li>Eggs</li>
-                    <li>Chicken stock</li>
-                    <li>Scalions</li>
-                    <li>Herbs</li>
-                </ul>
-                <h4>$4,99</h4>
-            </div>
-            
-        </div>
-        <div class="foodCard">
-            <img src="pics/sushi.jpg" alt="Sushi" class="food">
-            <h3>SUSHI</h3>
-            <div class="priceIngr">
-                <ul>
-                    <li>Salmon</li>
-                    <li>Rice</li>
-                    <li>Nori</li>
-                    <li>Caviar</li>
-                </ul>
-                <h4>$15,99</h4>
-            </div>
-           
-        </div>
-    </div>
+            <a href="index.html" class="text-gray-600 hover:text-gray-800"><i class="fas fa-arrow-left mr-2"></i>Back to Menu</a>
+        </nav>
+    </header>
 
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-gray-800">Food</h1>
+            <p class="text-xl text-gray-600 mt-2">Delicious bites for every mood.</p>
+        </div>
 
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <!-- Menu Item -->
+            <div class="flex justify-between items-center border-b py-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Avocado Toast</h3>
+                    <p class="text-gray-500">Sourdough, fresh avocado, chili flakes, and a squeeze of lime.</p>
+                </div>
+                <span class="font-bold text-lg text-gray-800">$12</span>
+            </div>
+            <!-- Menu Item -->
+            <div class="flex justify-between items-center border-b py-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Classic Burger</h3>
+                    <p class="text-gray-500">Beef patty, cheddar cheese, lettuce, tomato, and special sauce.</p>
+                </div>
+                <span class="font-bold text-lg text-gray-800">$15</span>
+            </div>
+            <!-- Menu Item -->
+            <div class="flex justify-between items-center border-b py-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Caesar Salad</h3>
+                    <p class="text-gray-500">Romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
+                </div>
+                <span class="font-bold text-lg text-gray-800">$10</span>
+            </div>
+            <!-- Menu Item -->
+            <div class="flex justify-between items-center py-4">
+                <div>
+                    <h3 class="text-xl font-semibold">Chocolate Lava Cake</h3>
+                    <p class="text-gray-500">Warm chocolate cake with a gooey center, served with vanilla ice cream.</p>
+                </div>
+                <span class="font-bold text-lg text-gray-800">$8</span>
+            </div>
+        </div>
+    </main>
 
-    <script src="JS/food.js"></script>
+    <footer class="bg-gray-800 text-white p-4 text-center mt-16">
+        <p>&copy; 2025 The Cafe. All rights reserved.</p>
+    </footer>
+
+    <script src="JS/main.js"></script>
 </body>
 </html>
