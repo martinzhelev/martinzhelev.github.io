@@ -20,39 +20,49 @@
     <header class="bg-white shadow-md sticky top-0 z-10">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
-                <i class="fas fa-mug-hot"></i> The Cafe
+                <i class="fas fa-mug-hot"></i> <span data-key="theCafe">The Cafe</span>
             </div>
-            <a href="index.html" class="text-gray-600 hover:text-gray-800"><i class="fas fa-arrow-left mr-2"></i>Back to Menu</a>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-gray-800 flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i><span data-key="backToMenu">Back to Menu</span>
+                </a>
+                <div class="text-sm">
+                    <button id="lang-en" class="font-semibold hover:text-blue-500 transition-colors">EN</button>
+                    <span class="text-gray-300">|</span>
+                    <button id="lang-bg" class="font-semibold hover:text-blue-500 transition-colors">BG</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center mb-12">
-            <h1 class="text-5xl font-extrabold text-gray-800">Drinks</h1>
-            <p class="text-xl text-gray-600 mt-2">Quench your thirst.</p>
+            <h1 class="text-5xl font-extrabold text-gray-800" data-key="drinksTitle">Drinks</h1>
+            <p class="text-xl text-gray-600 mt-2" data-key="drinksSubtitle">Quench your thirst.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Alcoholic Drinks -->
             <div id="alcoholicDrinks" class="category-card bg-white p-8 rounded-lg shadow-lg text-center cursor-pointer">
                 <i class="fas fa-martini-glass-citrus text-5xl text-purple-500 mb-4"></i>
-                <h3 class="text-2xl font-bold">Alcoholic Drinks</h3>
-                <p class="text-gray-500 mt-2">Cocktails, Wine, Beer & more.</p>
+                <h3 class="text-2xl font-bold" data-key="alcoholicDrinks">Alcoholic Drinks</h3>
+                <p class="text-gray-500 mt-2" data-key="alcoholicDrinksDesc">Cocktails, Wine, Beer & more.</p>
             </div>
 
             <!-- Non-Alcoholic Drinks -->
             <div id="nonAlcoholicDrinks" class="category-card bg-white p-8 rounded-lg shadow-lg text-center cursor-pointer">
                 <i class="fas fa-coffee text-5xl text-yellow-700 mb-4"></i>
-                <h3 class="text-2xl font-bold">Non-Alcoholic Drinks</h3>
-                <p class="text-gray-500 mt-2">Coffee, Tea, Juices & more.</p>
+                <h3 class="text-2xl font-bold" data-key="nonAlcoholicDrinks">Non-Alcoholic Drinks</h3>
+                <p class="text-gray-500 mt-2" data-key="nonAlcoholicDrinksDesc">Coffee, Tea, Juices & more.</p>
             </div>
         </div>
     </main>
 
     <footer class="bg-gray-800 text-white p-4 text-center mt-16">
-        <p>&copy; 2025 The Cafe. All rights reserved.</p>
+        <p data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
     </footer>
 
+    <script src="JS/translations.js"></script>
     <script src="JS/main.js"></script>
 </body>
 </html>

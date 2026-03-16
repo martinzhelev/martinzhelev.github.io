@@ -11,58 +11,80 @@
     <header class="bg-white shadow-md sticky top-0 z-10">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
-                <i class="fas fa-utensils"></i> The Cafe
+                <i class="fas fa-utensils"></i> <span data-key="theCafe">The Cafe</span>
             </div>
-            <a href="index.html" class="text-gray-600 hover:text-gray-800"><i class="fas fa-arrow-left mr-2"></i>Back to Menu</a>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-gray-800 flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i><span data-key="backToMenu">Back to Menu</span>
+                </a>
+                <div class="text-sm">
+                    <button id="lang-en" class="font-semibold hover:text-blue-500 transition-colors">EN</button>
+                    <span class="text-gray-300">|</span>
+                    <button id="lang-bg" class="font-semibold hover:text-blue-500 transition-colors">BG</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center mb-12">
-            <h1 class="text-5xl font-extrabold text-gray-800">Food</h1>
-            <p class="text-xl text-gray-600 mt-2">Delicious bites for every mood.</p>
+            <h1 class="text-5xl font-extrabold text-gray-800" data-key="foodTitle">Food</h1>
+            <p class="text-xl text-gray-600 mt-2" data-key="foodSubtitle">Delicious bites for every mood.</p>
         </div>
 
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-            <!-- Menu Item -->
-            <div class="flex justify-between items-center border-b py-4">
-                <div>
-                    <h3 class="text-xl font-semibold">Avocado Toast</h3>
-                    <p class="text-gray-500">Sourdough, fresh avocado, chili flakes, and a squeeze of lime.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Avocado Toast -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=2080&auto=format&fit=crop" alt="Avocado Toast" class="w-full h-56 object-cover">
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-2xl font-semibold" data-key="avocadoToast">Avocado Toast</h3>
+                        <span class="font-bold text-xl text-gray-800">€6.50</span>
+                    </div>
+                    <p class="text-gray-600 flex-grow" data-key="avocadoToastDesc">Sourdough, fresh avocado, chili flakes, and a squeeze of lime.</p>
                 </div>
-                <span class="font-bold text-lg text-gray-800">$12</span>
             </div>
-            <!-- Menu Item -->
-            <div class="flex justify-between items-center border-b py-4">
-                <div>
-                    <h3 class="text-xl font-semibold">Classic Burger</h3>
-                    <p class="text-gray-500">Beef patty, cheddar cheese, lettuce, tomato, and special sauce.</p>
+            <!-- Classic Burger -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1998&auto=format&fit=crop" alt="Classic Burger" class="w-full h-56 object-cover">
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-2xl font-semibold" data-key="classicBurger">Classic Burger</h3>
+                        <span class="font-bold text-xl text-gray-800">€9.00</span>
+                    </div>
+                    <p class="text-gray-600 flex-grow" data-key="classicBurgerDesc">Beef patty, cheddar cheese, lettuce, tomato, and special sauce.</p>
                 </div>
-                <span class="font-bold text-lg text-gray-800">$15</span>
             </div>
-            <!-- Menu Item -->
-            <div class="flex justify-between items-center border-b py-4">
-                <div>
-                    <h3 class="text-xl font-semibold">Caesar Salad</h3>
-                    <p class="text-gray-500">Romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
+            <!-- Caesar Salad -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=1887&auto=format&fit=crop" alt="Caesar Salad" class="w-full h-56 object-cover">
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-2xl font-semibold" data-key="caesarSalad">Caesar Salad</h3>
+                        <span class="font-bold text-xl text-gray-800">€7.50</span>
+                    </div>
+                    <p class="text-gray-600 flex-grow" data-key="caesarSaladDesc">Romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
                 </div>
-                <span class="font-bold text-lg text-gray-800">$10</span>
             </div>
-            <!-- Menu Item -->
-            <div class="flex justify-between items-center py-4">
-                <div>
-                    <h3 class="text-xl font-semibold">Chocolate Lava Cake</h3>
-                    <p class="text-gray-500">Warm chocolate cake with a gooey center, served with vanilla ice cream.</p>
+            <!-- Chocolate Lava Cake -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1586985289933-6039238938e9?q=80&w=1887&auto=format&fit=crop" alt="Chocolate Lava Cake" class="w-full h-56 object-cover">
+                <div class="p-6 flex-grow flex flex-col">
+                    <div class="flex justify-between items-baseline mb-2">
+                        <h3 class="text-2xl font-semibold" data-key="lavaCake">Chocolate Lava Cake</h3>
+                        <span class="font-bold text-xl text-gray-800">€5.50</span>
+                    </div>
+                    <p class="text-gray-600 flex-grow" data-key="lavaCakeDesc">Warm chocolate cake with a gooey center, served with vanilla ice cream.</p>
                 </div>
-                <span class="font-bold text-lg text-gray-800">$8</span>
             </div>
         </div>
     </main>
 
     <footer class="bg-gray-800 text-white p-4 text-center mt-16">
-        <p>&copy; 2025 The Cafe. All rights reserved.</p>
+        <p data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
     </footer>
 
+    <script src="JS/translations.js"></script>
     <script src="JS/main.js"></script>
 </body>
 </html>

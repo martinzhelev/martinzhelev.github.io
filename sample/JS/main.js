@@ -1,40 +1,64 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Helper function for navigation
+    // --- Language and Translation ---
+
+    const setLanguage = (lang) => {
+        // Fallback to English if translations are not loaded or language is invalid
+        if (typeof translations === 'undefined' || !translations[lang]) {
+            lang = 'en';
+        }
+
+        localStorage.setItem('language', lang);
+        document.documentElement.lang = lang;
+
+        // Update all elements with a data-key
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+
+        // Update language switcher appearance
+        const enButton = document.getElementById('lang-en');
+        const bgButton = document.getElementById('lang-bg');
+        if (enButton && bgButton) {
+            if (lang === 'bg') {
+                bgButton.classList.add('text-blue-500', 'underline');
+                enButton.classList.remove('text-blue-500', 'underline');
+            } else {
+                enButton.classList.add('text-blue-500', 'underline');
+                bgButton.classList.remove('text-blue-500', 'underline');
+            }
+        }
+    };
+
+    // Set initial language
+    const initialLang = localStorage.getItem('language') || 'en';
+    setLanguage(initialLang);
+
+    // --- Navigation ---
+
     const navigateTo = (url) => {
         window.location.href = url;
     };
 
-    // --- Navigation Handlers ---
+    // --- Event Delegation for Clicks ---
 
-    // For all pages: logo navigates to home
-    const logo = document.querySelector('.logoFirm');
-    if (logo) {
-        logo.addEventListener('click', () => navigateTo('index.html'));
-    }
+    document.body.addEventListener('click', (e) => {
+        const targetElement = e.target;
 
-    // For index.html: menu cards
-    const drinksCard = document.getElementById('drinks-card');
-    if (drinksCard) {
-        drinksCard.addEventListener('click', () => navigateTo('drinks.html'));
-    }
+        // Language Switcher
+        if (targetElement.id === 'lang-en') setLanguage('en');
+        if (targetElement.id === 'lang-bg') setLanguage('bg');
 
-    const foodCard = document.getElementById('food-card');
-    if (foodCard) {
-        foodCard.addEventListener('click', () => navigateTo('food.html'));
-    }
+        // Navigation Clicks
+        const navTarget = targetElement.closest('[id^="drinks-card"], [id^="food-card"], #alcoholicDrinks, #nonAlcoholicDrinks, .logoFirm');
+        if (!navTarget) return;
 
-    // For drinks.html: category cards
-    const alcoholicDrinksCard = document.getElementById('alcoholicDrinks');
-    if (alcoholicDrinksCard) {
-        alcoholicDrinksCard.addEventListener('click', () => navigateTo('alcoholicDrinks.html'));
-    }
-    
-    const nonAlcoholicDrinksCard = document.getElementById('nonAlcoholicDrinks');
-    if (nonAlcoholicDrinksCard) {
-        // Assuming a 'nonAlcoholicDrinks.html' page could be created
-        nonAlcoholicDrinksCard.addEventListener('click', () => {
-            alert('Menu for non-alcoholic drinks coming soon!');
-            // Or navigateTo('nonAlcoholicDrinks.html') if it exists
-        });
-    }
+        if (navTarget.matches('.logoFirm')) navigateTo('index.html');
+        if (navTarget.id === 'drinks-card') navigateTo('drinks.html');
+        if (navTarget.id === 'food-card') navigateTo('food.html');
+        if (navTarget.id === 'alcoholicDrinks') navigateTo('alcoholicDrinks.html');
+        if (navTarget.id === 'nonAlcoholicDrinks') navigateTo('nonAlcoholicDrinks.html');
+    });
 });
