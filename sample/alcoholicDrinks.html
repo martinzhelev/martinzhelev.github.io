@@ -20,7 +20,7 @@
             </div>
             <div class="flex items-center space-x-4">
                 <a href="drinks.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white flex items-center">
-                    <i class="fas fa-arrow-left mr-2"></i><span data-key="backToDrinks">Back to Drinks</span>
+                    <i class="fas fa-arrow-left mr-2"></i><span class="hidden md:inline" data-key="backToDrinks">Back to Drinks</span>
                 </a>
                 <div class="text-sm">
                     <button id="lang-en" class="font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-colors">EN</button>
@@ -35,13 +35,13 @@
         </nav>
     </header>
 
-    <main class="container mx-auto px-6 py-16">
+    <main class="container mx-auto px-6 py-10 md:py-16">
         <div class="text-center mb-12">
-            <h1 class="text-5xl font-extrabold text-gray-800 dark:text-white" data-key="alcoholicDrinksTitle">Alcoholic Drinks</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white" data-key="alcoholicDrinksTitle">Alcoholic Drinks</h1>
             <p class="text-xl text-gray-600 dark:text-gray-400 mt-2" data-key="alcoholicDrinksSubtitle">Carefully crafted for your enjoyment.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             <!-- Old Fashioned -->
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=1000&auto=format&fit=crop" alt="Old Fashioned" class="w-full h-56 object-cover" loading="lazy">
