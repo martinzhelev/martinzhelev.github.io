@@ -7,81 +7,85 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow-md sticky top-0 z-10">
+<body class="bg-gray-100 dark:bg-gray-900 font-sans">
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-10">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
+            <div class="text-2xl font-bold text-gray-800 dark:text-gray-200 logoFirm cursor-pointer">
                 <i class="fas fa-utensils"></i> <span data-key="theCafe">The Cafe</span>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="index.html" class="text-gray-600 hover:text-gray-800 flex items-center">
+                <a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i><span data-key="backToMenu">Back to Menu</span>
                 </a>
                 <div class="text-sm">
-                    <button id="lang-en" class="font-semibold hover:text-blue-500 transition-colors">EN</button>
-                    <span class="text-gray-300">|</span>
-                    <button id="lang-bg" class="font-semibold hover:text-blue-500 transition-colors">BG</button>
+                    <button id="lang-en" class="font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-colors">EN</button>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <button id="lang-bg" class="font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-colors">BG</button>
                 </div>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <i id="theme-toggle-dark-icon" class="fas fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+                </button>
             </div>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center mb-12">
-            <h1 class="text-5xl font-extrabold text-gray-800" data-key="foodTitle">Food</h1>
-            <p class="text-xl text-gray-600 mt-2" data-key="foodSubtitle">Delicious bites for every mood.</p>
+            <h1 class="text-5xl font-extrabold text-gray-800 dark:text-white" data-key="foodTitle">Food</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mt-2" data-key="foodSubtitle">Delicious bites for every mood.</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <!-- Avocado Toast -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?q=80&w=1000&auto=format&fit=crop" alt="Avocado Toast" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="avocadoToast">Avocado Toast</h3>
-                        <span class="font-bold text-xl text-gray-800">€6.50</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="avocadoToast">Avocado Toast</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€6.50</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="avocadoToastDesc">Sourdough, fresh avocado, chili flakes, and a squeeze of lime.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="avocadoToastDesc">Sourdough, fresh avocado, chili flakes, and a squeeze of lime.</p>
                 </div>
             </div>
             <!-- Classic Burger -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1000&auto=format&fit=crop" alt="Classic Burger" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="classicBurger">Classic Burger</h3>
-                        <span class="font-bold text-xl text-gray-800">€9.00</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="classicBurger">Classic Burger</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€9.00</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="classicBurgerDesc">Beef patty, cheddar cheese, lettuce, tomato, and special sauce.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="classicBurgerDesc">Beef patty, cheddar cheese, lettuce, tomato, and special sauce.</p>
                 </div>
             </div>
             <!-- Caesar Salad -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?q=80&w=1000&auto=format&fit=crop" alt="Caesar Salad" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="caesarSalad">Caesar Salad</h3>
-                        <span class="font-bold text-xl text-gray-800">€7.50</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="caesarSalad">Caesar Salad</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€7.50</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="caesarSaladDesc">Romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="caesarSaladDesc">Romaine lettuce, croutons, parmesan cheese, and Caesar dressing.</p>
                 </div>
             </div>
             <!-- Chocolate Lava Cake -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?q=80&w=1000&auto=format&fit=crop" alt="Chocolate Lava Cake" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="lavaCake">Chocolate Lava Cake</h3>
-                        <span class="font-bold text-xl text-gray-800">€5.50</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="lavaCake">Chocolate Lava Cake</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€5.50</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="lavaCakeDesc">Warm chocolate cake with a gooey center, served with vanilla ice cream.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="lavaCakeDesc">Warm chocolate cake with a gooey center, served with vanilla ice cream.</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white p-4 text-center mt-16">
-        <p data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
+    <footer class="bg-gray-800 dark:bg-black text-white p-4 text-center mt-16">
+        <p class="dark:text-gray-300" data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
     </footer>
 
     <script src="JS/translations.js"></script>

@@ -16,24 +16,30 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow-md">
+<body class="bg-gray-100 dark:bg-gray-900 font-sans">
+    <header class="bg-white dark:bg-gray-800 shadow-md">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
+            <div class="text-2xl font-bold text-gray-800 dark:text-gray-200 logoFirm cursor-pointer">
                 <i class="fas fa-mug-hot"></i> <span data-key="theCafe">The Cafe</span>
             </div>
-            <div class="text-sm">
-                <button id="lang-en" class="font-semibold hover:text-blue-500 transition-colors">EN</button>
-                <span class="text-gray-300">|</span>
-                <button id="lang-bg" class="font-semibold hover:text-blue-500 transition-colors">BG</button>
+            <div class="flex items-center space-x-4">
+                <div class="text-sm">
+                    <button id="lang-en" class="font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-colors">EN</button>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <button id="lang-bg" class="font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-colors">BG</button>
+                </div>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <i id="theme-toggle-dark-icon" class="fas fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+                </button>
             </div>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center">
-            <h1 class="text-5xl font-extrabold text-gray-800 mb-4" data-key="welcome">Welcome!</h1>
-            <p class="text-xl text-gray-600 mb-12" data-key="exploreMenu">Explore our delicious menu.</p>
+            <h1 class="text-5xl font-extrabold text-gray-800 dark:text-white mb-4" data-key="welcome">Welcome!</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-12" data-key="exploreMenu">Explore our delicious menu.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-12">
@@ -53,8 +59,8 @@
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white p-4 text-center mt-16">
-        <p data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
+    <footer class="bg-gray-800 dark:bg-black text-white p-4 text-center mt-16">
+        <p class="dark:text-gray-300" data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
     </footer>
 
     <script src="JS/translations.js"></script>

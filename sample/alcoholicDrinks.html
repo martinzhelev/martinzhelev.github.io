@@ -7,81 +7,85 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow-md sticky top-0 z-10">
+<body class="bg-gray-100 dark:bg-gray-900 font-sans">
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-10">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800 logoFirm cursor-pointer">
+            <div class="text-2xl font-bold text-gray-800 dark:text-gray-200 logoFirm cursor-pointer">
                 <i class="fas fa-martini-glass-citrus"></i> <span data-key="theCafe">The Cafe</span>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="drinks.html" class="text-gray-600 hover:text-gray-800 flex items-center">
+                <a href="drinks.html" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white flex items-center">
                     <i class="fas fa-arrow-left mr-2"></i><span data-key="backToDrinks">Back to Drinks</span>
                 </a>
                 <div class="text-sm">
-                    <button id="lang-en" class="font-semibold hover:text-blue-500 transition-colors">EN</button>
-                    <span class="text-gray-300">|</span>
-                    <button id="lang-bg" class="font-semibold hover:text-blue-500 transition-colors">BG</button>
+                    <button id="lang-en" class="font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-colors">EN</button>
+                    <span class="text-gray-300 dark:text-gray-600">|</span>
+                    <button id="lang-bg" class="font-semibold text-gray-800 dark:text-gray-200 hover:text-blue-500 transition-colors">BG</button>
                 </div>
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <i id="theme-toggle-dark-icon" class="fas fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+                </button>
             </div>
         </nav>
     </header>
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center mb-12">
-            <h1 class="text-5xl font-extrabold text-gray-800" data-key="alcoholicDrinksTitle">Alcoholic Drinks</h1>
-            <p class="text-xl text-gray-600 mt-2" data-key="alcoholicDrinksSubtitle">Carefully crafted for your enjoyment.</p>
+            <h1 class="text-5xl font-extrabold text-gray-800 dark:text-white" data-key="alcoholicDrinksTitle">Alcoholic Drinks</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mt-2" data-key="alcoholicDrinksSubtitle">Carefully crafted for your enjoyment.</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <!-- Old Fashioned -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?q=80&w=1000&auto=format&fit=crop" alt="Old Fashioned" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="oldFashioned">Old Fashioned</h3>
-                        <span class="font-bold text-xl text-gray-800">€8.50</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="oldFashioned">Old Fashioned</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€8.50</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="oldFashionedDesc">Whiskey, sugar, bitters, and a twist of citrus.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="oldFashionedDesc">Whiskey, sugar, bitters, and a twist of citrus.</p>
                 </div>
             </div>
             <!-- Margarita -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=1000&auto=format&fit=crop" alt="Margarita" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="margarita">Margarita</h3>
-                        <span class="font-bold text-xl text-gray-800">€7.00</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="margarita">Margarita</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€7.00</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="margaritaDesc">Tequila, lime juice, and triple sec with a salted rim.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="margaritaDesc">Tequila, lime juice, and triple sec with a salted rim.</p>
                 </div>
             </div>
             <!-- House Red Wine -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
                 <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1000&auto=format&fit=crop" alt="House Red Wine" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="redWine">House Red Wine</h3>
-                        <span class="font-bold text-xl text-gray-800">€5.00</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="redWine">House Red Wine</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€5.00</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="redWineDesc">A smooth and balanced glass of our finest selection.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="redWineDesc">A smooth and balanced glass of our finest selection.</p>
                 </div>
             </div>
             <!-- Craft IPA -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                <img src="https://images.unsplash.com/photo-1618183479302-1e0aa382c36b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Craft IPA" class="w-full h-56 object-cover" loading="lazy">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <img src="https://images.unsplash.com/photo-1535958636474-b021ee8876a3?q=80&w=1000&auto=format&fit=crop" alt="Craft IPA" class="w-full h-56 object-cover" loading="lazy">
                 <div class="p-6 flex-grow flex flex-col">
                     <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-semibold" data-key="craftIpa">Craft IPA</h3>
-                        <span class="font-bold text-xl text-gray-800">€6.00</span>
+                        <h3 class="text-2xl font-semibold dark:text-white" data-key="craftIpa">Craft IPA</h3>
+                        <span class="font-bold text-xl text-gray-800 dark:text-gray-200">€6.00</span>
                     </div>
-                    <p class="text-gray-600 flex-grow" data-key="craftIpaDesc">A hoppy and refreshing India Pale Ale from a local brewery.</p>
+                    <p class="text-gray-600 dark:text-gray-400 flex-grow" data-key="craftIpaDesc">A hoppy and refreshing India Pale Ale from a local brewery.</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white p-4 text-center mt-16">
-        <p data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
+    <footer class="bg-gray-800 dark:bg-black text-white p-4 text-center mt-16">
+        <p class="dark:text-gray-300" data-key="copyright">&copy; 2025 The Cafe. All rights reserved.</p>
     </footer>
 
     <script src="JS/translations.js"></script>

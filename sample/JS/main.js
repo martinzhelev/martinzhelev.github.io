@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // --- Theme (Dark/Light Mode) ---
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+    // Function to set the theme
+    const setTheme = (theme) => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            if(themeToggleLightIcon) themeToggleLightIcon.classList.remove('hidden');
+            if(themeToggleDarkIcon) themeToggleDarkIcon.classList.add('hidden');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            if(themeToggleLightIcon) themeToggleLightIcon.classList.add('hidden');
+            if(themeToggleDarkIcon) themeToggleDarkIcon.classList.remove('hidden');
+            localStorage.setItem('theme', 'light');
+        }
+    };
+
+    // Set theme on initial load
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme('dark');
+    } else {
+        setTheme('light');
+    }
+
     // --- Language and Translation ---
 
     const setLanguage = (lang) => {
@@ -46,6 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.body.addEventListener('click', (e) => {
         const targetElement = e.target;
+
+        // Theme Toggle Button
+        if (targetElement.closest('#theme-toggle')) {
+            if (document.documentElement.classList.contains('dark')) {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+            return; // Prevent other click handlers from firing
+        }
 
         // Language Switcher
         if (targetElement.id === 'lang-en') setLanguage('en');
